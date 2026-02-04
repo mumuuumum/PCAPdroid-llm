@@ -4,9 +4,10 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven { url '/opt/android-plugin/repo-agp7.4-dev' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.0.2'
+        classpath 'com.android.tools.build:gradle:7.4.0-dev'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -18,6 +19,7 @@ allprojects {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
+        maven { url '/opt/android-plugin/repo-agp7.4-dev' }
     }
     tasks.withType(JavaCompile) {
         options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
